@@ -9,18 +9,10 @@
     display: flex;
     flex-direction: column;
     color: white;
-}
-.home-container p {
-    margin: 0;
-    font-size: 4rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    gap: 3rem;
 }
 .intro-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+    margin-top: 10%;
 }
 .button-section {
     display: flex;
@@ -43,3 +35,54 @@
     background-color: #0AE1C0;
     color: black;
 }
+.intro-section span {
+    white-space: pre;
+    margin: 0;
+    font-size: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 1s ease-in-out;
+}
+.intro-section .pre-animation {
+    position: relative;
+    opacity: 0;
+    animation: fade-in-out 1s forwards;
+}
+.button-section .pre-animation {
+    position: relative;
+    opacity: 0;
+    animation: fade-in-out 1.5s forwards;
+}
+.intro-section > div {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+.intro-section .animated {
+    animation: bounce 1s;
+    color: #0AE1C0;
+}
+@media only screen and (max-width: 800px) {
+    .home-container span {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .intro-section > div {
+        height: calc(fit-content + 100px);
+    }
+    .break-here::after {
+        content: '\a';
+    }
+}
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+    40% {transform: translateY(-30px);} 
+    60% {transform: translateY(-15px);} 
+} 
+@keyframes fade-in-out {
+    0% {left: -1000px;}
+    100% {left: 0; opacity: 1;}
+} 

@@ -3,7 +3,7 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     width: 600px;
-    height: 700px;
+    min-height: 700px;
     max-width: 90vw;
     max-height: 80vh;
     margin-top: 10px;
@@ -52,3 +52,30 @@
     margin: 0;
     height: 100px;
 }
+.works-container .pre-animation {
+    position: relative;
+    opacity: 0;
+    animation: fade-in-out 1s forwards;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        min-height: 115vh;
+    }
+    .works-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        max-height: fit-content;
+        transform: translate(-50%, -43%);
+        margin-top: 30px;
+    }
+    .works-container h1 {
+        height: 50px;
+    }
+    .works-container section > div {
+        height: 100px;
+    }
+}
+@keyframes fade-in-out {
+    0% {left: -1000px;}
+    100% {left: 0; opacity: 1;}
+} 

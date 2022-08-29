@@ -14,3 +14,9 @@
     color: white;
     background-color: #F0EBF8;
 }
+
+@media only screen and (max-width: 600px) {
+    iframe {
+        height: 400px;
+    }
+}
