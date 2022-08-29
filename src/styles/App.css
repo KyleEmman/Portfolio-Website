@@ -1,0 +1,14 @@
+/* p {
+  position: absolute;
+  color: white;
+  margin: 0;
+  text-align: center;
+  animation: fade-in-out 1s forwards;
+  opacity: 0;
+  
+}
+
+@keyframes fade-in-out {
+  0% {left: -100px;}
+  100% {left: 50%; opacity: 1;}
+} */

@@ -1,0 +1,16 @@
+.contact-container {
+    width: 600px;
+    max-width: 90vw;
+    min-height: 80vh;
+    height: fit-content;
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #F0EBF8;
+}
