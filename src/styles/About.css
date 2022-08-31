@@ -1,0 +1,54 @@
+.about-container {
+    width: 90vw;
+    height: 80vh;
+    margin-top: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.about-container div {
+    width: 50%;
+    transform: translateY(-50px);
+}
+.about-container h1 {
+    color: #0AE1C0;
+    margin: 0;
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+    opacity: 0;
+    animation: fade-in-out .7s forwards;
+}
+.about-container p {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 150%;
+    position: relative;
+    opacity: 0;
+    animation: fade-in-out 1.1s forwards;
+}
+.about-container a {
+    background-color: transparent;
+    height: fit-content;
+    color: #0AE1C0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 1s ease;
+    position: relative;
+    opacity: 0;
+    animation: fade-in-out 1.4s forwards;
+}
+.about-container a:hover {
+    color: #2e7e72;
+}
+@keyframes fade-in-out {
+    0% {left: -1000px;}
+    100% {left: 0; opacity: 1;}
+} 
